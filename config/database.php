@@ -5,12 +5,20 @@
  */
 
 class Database {
-    private $host = 'sql213.byethost7.com';
-    private $db_name = 'b7_39929293_sge2';
-    private $username = 'b7_39929293';
-    private $password = 'Idmitnick2$';
+    private $host;
+    private $db_name;
+    private $username;
+    private $password;
     private $charset = 'utf8mb4';
     private $conn;
+
+    public function __construct() {
+        // Usar variables de entorno de Railway o valores por defecto
+        $this->host = $_ENV['MYSQL_HOST'] ?? 'sql213.byethost7.com';
+        $this->db_name = $_ENV['MYSQL_DATABASE'] ?? 'b7_39929293_sge2';
+        $this->username = $_ENV['MYSQL_USER'] ?? 'b7_39929293';
+        $this->password = $_ENV['MYSQL_PASSWORD'] ?? 'Idmitnick2$';
+    }
 
     /**
      * Obtener conexión a la base de datos
