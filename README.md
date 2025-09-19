@@ -45,23 +45,27 @@ cd SGP
    - Navega a `http://localhost/sge-v2`
    - Usa las credenciales del SuperAdmin
 
-### Despliegue en Vercel
+### Despliegue en Railway (Recomendado)
 
-1. **Conecta tu repositorio** a Vercel desde GitHub
+1. **Conecta tu repositorio** a Railway desde GitHub
 2. **Configuración automática**:
-   - Framework Preset: **Other**
-   - Root Directory: **.** (vacío)
-   - Build Command: **vacío**
-   - Output Directory: **.** (vacío)
-   - Install Command: **vacío**
+   - Railway detectará automáticamente que es un proyecto PHP
+   - Usará el archivo `railway.json` para la configuración
+   - El `Procfile` definirá el comando de inicio
 
-3. **Variables de entorno** (opcional):
-   - Configura las credenciales de base de datos en Vercel
-   - O usa una base de datos externa como PlanetScale o Railway
+3. **Configurar base de datos**:
+   - En Railway dashboard: **New** → **Database** → **MySQL**
+   - Railway creará automáticamente las variables de entorno:
+     - `MYSQL_HOST`
+     - `MYSQL_DATABASE` 
+     - `MYSQL_USER`
+     - `MYSQL_PASSWORD`
+     - `MYSQL_PORT`
 
 4. **Despliegue**:
-   - Vercel detectará automáticamente los archivos PHP
-   - El sistema estará disponible en `https://tu-proyecto.vercel.app`
+   - Railway desplegará automáticamente tu aplicación
+   - El sistema estará disponible en `https://tu-proyecto.railway.app`
+   - La base de datos estará conectada automáticamente
 
 ## Estructura del Proyecto
 
