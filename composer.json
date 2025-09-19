@@ -1,0 +1,16 @@
+{
+  "name": "israel8002/sge-v2",
+  "description": "Sistema de Gestión de Personal v2",
+  "type": "project",
+  "require": {
+    "php": ">=7.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "classes/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true
+  }
+}

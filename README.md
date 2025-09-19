@@ -23,10 +23,12 @@ Sistema web de gestión de personal desarrollado en PHP con interfaz responsive 
 
 ## Instalación
 
+### Instalación Local
+
 1. Clona el repositorio:
 ```bash
-git clone https://github.com/tu-usuario/sge-v2.git
-cd sge-v2
+git clone https://github.com/Israel8002/SGP.git
+cd SGP
 ```
 
 2. Configura la base de datos:
@@ -40,8 +42,26 @@ cd sge-v2
    - Habilita las extensiones PHP necesarias (PDO, MySQL)
 
 4. Accede al sistema:
-   - Navega a `http://tu-dominio.com`
+   - Navega a `http://localhost/sge-v2`
    - Usa las credenciales del SuperAdmin
+
+### Despliegue en Vercel
+
+1. **Conecta tu repositorio** a Vercel desde GitHub
+2. **Configuración automática**:
+   - Framework Preset: **Other**
+   - Root Directory: **.** (vacío)
+   - Build Command: **vacío**
+   - Output Directory: **.** (vacío)
+   - Install Command: **vacío**
+
+3. **Variables de entorno** (opcional):
+   - Configura las credenciales de base de datos en Vercel
+   - O usa una base de datos externa como PlanetScale o Railway
+
+4. **Despliegue**:
+   - Vercel detectará automáticamente los archivos PHP
+   - El sistema estará disponible en `https://tu-proyecto.vercel.app`
 
 ## Estructura del Proyecto
 
