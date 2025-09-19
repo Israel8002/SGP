@@ -3,7 +3,9 @@
  * Página de Login - SGE v2
  */
 
-require_once 'classes/Auth.php';
+require_once 'autoload.php';
+
+use App\Auth;
 
 $auth = new Auth();
 $error = '';
