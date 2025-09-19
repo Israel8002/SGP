@@ -1,4 +1,7 @@
 <?php
+// Cargar autoloader
+require_once '../autoload.php';
+
 // Redirigir todas las rutas a los archivos PHP correspondientes
 $request_uri = $_SERVER['REQUEST_URI'];
 $path = parse_url($request_uri, PHP_URL_PATH);

@@ -4,6 +4,8 @@
  * Implementa medidas de seguridad basadas en las limitaciones del hosting
  */
 
+namespace App;
+
 class Security {
     
     /**
